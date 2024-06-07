@@ -15,9 +15,14 @@ from fairscale.nn.model_parallel.initialize import (
     initialize_model_parallel,
     model_parallel_is_initialized,
 )
-
+from fairscale.nn.model_parallel.layers import (
+    ColumnParallelLinear,
+    ParallelEmbedding,
+    RowParallelLinear,
+)
 from llama.model import ModelArgs, Transformer
 from llama.tokenizer import Tokenizer
+from llama.bitlinear import BitLinearNew
 
 Role = Literal["system", "user", "assistant"]
 
@@ -119,6 +124,9 @@ class Llama:
         model = Transformer(model_args)
         model.load_state_dict(checkpoint, strict=False)
         print(f"Loaded in {time.time() - start_time:.2f} seconds")
+
+        # transfer to binary linear
+        replace_linears_in_pytorch_model(model)
 
         return Llama(model, tokenizer)
 
@@ -419,3 +427,32 @@ def sample_top_p(probs, p):
     next_token = torch.multinomial(probs_sort, num_samples=1)
     next_token = torch.gather(probs_idx, -1, next_token)
     return next_token
+
+
+def replace_linears_in_pytorch_model(
+    model,
+):
+    """
+    Replaces all instances of nn.Linear in the given model with BitLinear15b.
+
+    Args:
+        model (nn.Module): The model to modify.
+
+    Returns:
+        None
+    """
+    for name, module in model.named_children():
+        if isinstance(module, torch.nn.Linear) or isinstance(module, ColumnParallelLinear) or isinstance(module, RowParallelLinear):
+            # Replace the nn.Linear with BitLinear matching in features and and out_features, and add it to the model
+            setattr(
+                model,
+                name,
+                BitLinearNew(
+                    in_features=module.in_features,
+                    out_features=module.out_features,
+                    bias=module.bias is not None,
+                ),
+            )
+        else:
+            # Recursively apply to child modules
+            replace_linears_in_pytorch_model(module)

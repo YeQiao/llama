@@ -1,0 +1,130 @@
+{
+  "Basic Info": {
+    "Name": "Jane Elizabeth Doe",
+    "DOB": "1996-04-15",
+    "Age": 28,
+    "Gender": "F",
+    "POB": "Boston, MA, USA",
+    "Res": "123 Maple St, NY, NY, USA",
+    "Nat": "American",
+    "Contact": {
+      "Email": "janedoe@example.com",
+      "Phone": "123-456-7890",
+      "Twitter": "@janedoe"
+    }
+  },
+  "Physical": {
+    "Height": "5'6\" (167 cm)",
+    "Weight": "130 lbs (59 kg)",
+    "Body": "Athletic",
+    "Hair": "Natural: Brown, Current: Auburn, Wavy",
+    "Eyes": "Green",
+    "Skin": "Fair",
+    "Features": ["Scar (left cheek)", "Nose piercing"]
+  },
+  "Background": {
+    "Education": {
+      "Primary": "Lincoln Elementary",
+      "Secondary": "Boston High, 2014",
+      "Higher": "MIT, BS CS, 2018",
+      "Certs": ["Scrum Master"]
+    },
+    "Job": {
+      "Current": "Software Engineer, TechCorp, 2y",
+      "Prev": ["Jr Developer, WebSolutions, 2018-2020"],
+      "Goals": ["Lead Dev", "Start tech co."]
+    },
+    "Skills": {
+      "Pro": ["Python", "Java", "Proj Mgmt"],
+      "Lang": {"Eng": "Fluent", "Sp": "Intermed"},
+      "Other": ["Guitar", "Graphic design"]
+    },
+    "Hobbies": ["Hiking", "Biking", "Reading sci-fi", "Baking", "Painting", "Poetry"],
+    "Achievements": {
+      "Awards": ["Best Dev, TechCorp, 2022"],
+      "Projects": ["Fitness app, 50K+ downloads"],
+      "Pubs": ["Co-authored AI healthcare paper"]
+    }
+  },
+  "Personality": {
+    "Temp": "Ambivert",
+    "Pos": ["Analytical", "Creative", "Team Player"],
+    "Neg": ["Perfectionist", "Impatient", "Shy (large groups)"],
+    "Values": ["Integrity", "Innovation", "Compassion"],
+    "Beliefs": "Agnostic, Ethical living",
+    "Motivations": "Tech impact",
+    "Behavior": "Collaborative, diplomatic"
+  },
+  "Relationships": {
+    "Family": {
+      "Parents": ["John (Doctor)", "Mary (Teacher)"],
+      "Siblings": ["Emily, 25, Graphic Designer"],
+      "Extended": ["Grandparents (Paternal)", "Aunts, Uncles (Maternal)"]
+    },
+    "Friends": {
+      "Best": ["Laura (College)", "Michael (Colleague)"],
+      "Social": "Work, college friends"
+    },
+    "Romantic": {
+      "Current": "Alex, 3y, met at tech conf",
+      "Past": "College relationship, amicable"
+    },
+    "Pets": {
+      "Type": "Golden Retriever",
+      "Name": "Max",
+      "Bond": "Close"
+    }
+  },
+  "Lifestyle": {
+    "Routine": {
+      "Morning": "Wake-up, morning activities",
+      "Work": "Typical day",
+      "Evening": "Evening activities, bed"
+    },
+    "Diet": {
+      "Pref": "Vegetarian",
+      "Restrictions": ["None"],
+      "Fav Foods": ["Italian", "Pizza", "Tiramisu"]
+    },
+    "Exercise": {
+      "Routine": ["Gym", "Home workouts", "Yoga"],
+      "Fav": ["Running", "Team sports"]
+    },
+    "Travel": {
+      "History": ["Europe", "Asia"],
+      "Fav": ["Kyoto", "Tokyo"],
+      "Goals": ["Australia"]
+    }
+  },
+  "Goals": {
+    "Short": ["Learn French", "Marathon"],
+    "Medium": ["Lead Dev"],
+    "Long": ["Start tech co.", "Travel world"],
+    "Bucket": ["Skydiving", "Write novel", "Northern Lights"]
+  },
+  "Favorites": {
+    "Books": {
+      "Titles": ["Dune", "1984"],
+      "Genres": ["Sci-fi", "Dystopian"]
+    },
+    "Movies/TV": {
+      "Movies": ["Inception"],
+      "TV": ["Stranger Things"],
+      "Genres": ["Sci-fi", "Drama"]
+    },
+    "Music": {
+      "Songs": ["Fav songs"],
+      "Artists": ["Fav artists"],
+      "Genres": ["Alt Rock", "Indie Folk"]
+    },
+    "Food": {
+      "Dishes": ["Pizza", "Tiramisu"],
+      "Cuisines": ["Italian"]
+    },
+    "Places": {
+      "Visit": ["Central Park"],
+      "Relax": ["Fav cafes"],
+      "Dream": ["Northern Lights"]
+    }
+  }
+}

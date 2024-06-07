@@ -1,0 +1,36 @@
+Prompt token length: 8441
+
+
+• Introduces TG-NAS, a model-based zero-cost proxy for neural architecture search that can handle unseen operators in new search spaces without retraining.
+• Uses a transformer-based operator embedding generator and a graph convolution network (GCN) to predict architecture performance.
+• Achieves up to 30 times faster search compared to other zero-cost proxies and up to 310 times faster than other NAS methods while maintaining high accuracy.
+• Addresses the limitation of existing zero-cost proxies that are data-dependent and suffer from biases • Offers a universally applicable model-based predictor that can handle diverse search spaces and unseen operators
+• Demonstrates the effectiveness of combining TG-NAS with Bayesian optimization for further acceleration
+• Provides a new way of encoding operators using sentence embeddings and a pre-trained transformer model
+• Exhibits superior performance compared to other zero-cost proxies on NAS-Bench-201 and DARTS spaces
+• Presents a hybrid searching method that combines pruning-evolutionary search with the proposed proxy
+• Opensource implementation to facilitate future research</s>
+
+
+The authors propose a new approach called TG-NAS, which stands for "Tensor-Graph Neural Architecture Search," that combines a transformer-based operator embedding generator and a graph convolutional network (GCN) to predict the performance of a neural network architecture without training it. They claim that their approach can significantly improve the efficiency of neural architecture search (NAS) by acting as a zero-cost proxy, guiding the search process without the need for expensive training. Existing zero-cost proxies suffer from limitations such as being data-dependent and slow, whereas TG-NAS can handle unseen operators and new search spaces without retraining. The authors also compare their approach with other zero-cost proxies and show that it achieves higher accuracy and faster search times than most of them. They propose a pruning-evolutionary hybrid searching method that combines reinforcement learning and genealogical search to quickly identify the best architecture in the search space. They also analyze the issue of model-based prediction and unseen operators, showing that existing methods have limitations and fail to generalize to new search spaces. Their approach uses a transformer embedding generator and a GCN trainer to predict the accuracy of a given architecture, and the predicted ranking guides the search process. They also explore the use of different graph neural networks (GNNs) and find that GCN is a suitable choice due to its ability to handle diverse architectures. The authors conclude that their approach offers a unique perspective on understanding zero-cost NAS and suggest directions for future research.</s>
+
+
+According to the text, TG-NAS stands out from other model-based prediction works in the following ways:
+
+1. Universality: TG-NAS is a genera
+l zero-cost proxy that can handle unseen operators in new search spaces without retri
+ning. Other model-based predicters require fully evaluated architec
+tures as training data, whereas TG-NAS does not.
+2. Cost-Effectiveness: TG-NAS achieves up to 30 times faster search com
+times compared to other zero-cost proxies, making it a more efficient solutio
+n for NAS.
+3. Independence: TG-NAS is data-independent, meaning it can guide the search proces
+s without being data-dependent, unlike other model-based predicters.
+4. Applicability: TG-NAS can act as a zero-cost proxy, opening up a ne
+ew space for prediction model-only architecture search.
+
+Please let me know if you want me to expand my answer or if you have any questio
+ns!</s>
+
+
+According to the text, TG-NAS achieved up to 30 times faster search efficiency compared to other zero-cost proxies and up to 310 times faster than other NAS methods. Specifically, it reduced the search time from 40 seconds to 4 minutes for the DARTS space and 30 seconds to 2 minutes for the NAS-Bench-201 space.</s>
