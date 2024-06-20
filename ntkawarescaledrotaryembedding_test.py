@@ -28,6 +28,7 @@ class ScaledRotaryEmbedding(torch.nn.Module):
         self.scale = 8
         t /= self.scale
 old_init = transformers.models.llama.modeling_llama.LlamaRotaryEmbedding.__init__
+
 def ntk_scaled_init(self, dim, max_position_embeddings=2048, base=10000, device=None):
     
     #The method is just these three lines
@@ -42,6 +43,7 @@ if args.extend_type == "NTK":
     transformers.models.llama.modeling_llama.LlamaRotaryEmbedding.__init__ = ntk_scaled_init
 elif args.extend_type == "Linear":
     transformers.models.llama.modeling_llama.LlamaRotaryEmbedding = ScaledRotaryEmbedding
+
 # model_path = "TheBloke/OpenAssistant-SFT-7-Llama-30B-HF"
 model_path = "/home/yeq6/Research_project/llama/llama-2-7b-chat_hf"
 tokenizer = AutoTokenizer.from_pretrained(model_path)
